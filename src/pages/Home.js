@@ -9,6 +9,7 @@ export default function Home() {
     const [selectedSymbol, setSelectedSymbol] = useState('BINANCE:BTCUSDT');
     const [prices, setPrices] = useState({});
     const [previousPrices, setPreviousPrices] = useState({});
+    const [admin, setAdmin] = useState(false);
 
     const getMe = async () => {
         try {
@@ -19,6 +20,10 @@ export default function Home() {
                 },
             });
             setMe(response.data);
+
+            if (response.data.authorities.includes("ROLE_ADMIN")) {
+                setAdmin(true);
+            }
         } catch (error) {
             console.error('API call error:', error);
         }
@@ -85,7 +90,7 @@ export default function Home() {
 
     return (
         <>
-            <HomeNavbar />
+            <HomeNavbar isAdmin={admin} />
             <div className="d-flex" style={{ height: 'calc(100vh - 56px)' }}>
                 <div style={{ width: '80%' }}>
                     <TradingViewWidget symbol={selectedSymbol} />

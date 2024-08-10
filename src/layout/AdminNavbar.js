@@ -5,7 +5,7 @@ import Nav from 'react-bootstrap/Nav';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import {Navbar} from "react-bootstrap";
 
-export default function HomeNavbar({isAdmin}) {
+export default function AdminNavbar() {
     return (
         <Navbar collapseOnSelect expand="lg" className="custom-navbar">
             <Container>
@@ -14,12 +14,10 @@ export default function HomeNavbar({isAdmin}) {
                     <Nav className="me-auto">
                     </Nav>
                     <Nav>
-                        <NavDropdown title="Profile" id="collapsible-nav-dropdown" className="custom-navbar">
-                            {isAdmin && (
-                                <NavDropdown.Item href="/admin">
-                                    Admin
-                                </NavDropdown.Item>
-                            )}
+                        <NavDropdown title="Admin" id="collapsible-nav-dropdown" className="custom-navbar">
+                            <NavDropdown.Item href="/home">
+                                Home
+                            </NavDropdown.Item>
                             <NavDropdown.Item href="/portfolio">
                                 Portfolio
                             </NavDropdown.Item>
