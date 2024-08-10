@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { TOKEN } from "../config";
-import TrackingNavbar from "../layout/TrackingNavbar";
+import PortfolioNavbar from "../layout/PortfolioNavbar";
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
-export default function MyProfile() {
+export default function Portfolio() {
     const [me, setMe] = useState(null);
     const [showModal, setShowModal] = useState(false);
     const [modalData, setModalData] = useState(null);
@@ -110,7 +110,7 @@ export default function MyProfile() {
 
     return (
         <>
-            <TrackingNavbar />
+            <PortfolioNavbar />
             <div className="d-flex flex-column align-items-center" style={{ height: 'calc(100vh - 56px)' }}>
                 <div className="mb-3">
                     <Button onClick={handleOpenModal}>

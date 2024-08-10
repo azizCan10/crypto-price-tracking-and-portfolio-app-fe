@@ -5,7 +5,7 @@ import Nav from 'react-bootstrap/Nav';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import {Navbar} from "react-bootstrap";
 
-export default function TrackingNavbar() {
+export default function PortfolioNavbar() {
     return (
         <Navbar collapseOnSelect expand="lg" className="custom-navbar">
             <Container>
@@ -14,16 +14,16 @@ export default function TrackingNavbar() {
                     <Nav className="me-auto">
                     </Nav>
                     <Nav>
-                        <NavDropdown title="Hesap" id="collapsible-nav-dropdown" className="custom-navbar">
+                        <NavDropdown title="Profile" id="collapsible-nav-dropdown" className="custom-navbar">
                             <NavDropdown.Item href="/home">
-                                Ana Sayfa
+                                Home
                             </NavDropdown.Item>
                             <NavDropdown.Item href="/operation-history">
-                                İşlem geçmişi
+                                Operation history
                             </NavDropdown.Item>
                             <NavDropdown.Divider/>
                             <NavDropdown.Item href="/">
-                                Çıkış yap
+                                Log out
                             </NavDropdown.Item>
                         </NavDropdown>
                     </Nav>

@@ -14,16 +14,16 @@ export default function HomeNavbar() {
                     <Nav className="me-auto">
                     </Nav>
                     <Nav>
-                        <NavDropdown title="Hesap" id="collapsible-nav-dropdown" className="custom-navbar">
-                            <NavDropdown.Item href="/profile">
-                                Profilim
+                        <NavDropdown title="Profile" id="collapsible-nav-dropdown" className="custom-navbar">
+                            <NavDropdown.Item href="/portfolio">
+                                Portfolio
                             </NavDropdown.Item>
                             <NavDropdown.Item href="/operation-history">
-                                İşlem geçmişi
+                                Operation history
                             </NavDropdown.Item>
                             <NavDropdown.Divider/>
                             <NavDropdown.Item href="/">
-                                Çıkış yap
+                                Log ut
                             </NavDropdown.Item>
                         </NavDropdown>
                     </Nav>

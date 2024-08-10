@@ -14,16 +14,16 @@ export default function OperationHistoryNavbar() {
                     <Nav className="me-auto">
                     </Nav>
                     <Nav>
-                        <NavDropdown title="Hesap" id="collapsible-nav-dropdown" className="custom-navbar">
+                        <NavDropdown title="Profile" id="collapsible-nav-dropdown" className="custom-navbar">
                             <NavDropdown.Item href="/home">
-                                Ana Sayfa
+                                Home
                             </NavDropdown.Item>
-                            <NavDropdown.Item href="/profile">
-                                Profilim
+                            <NavDropdown.Item href="/portfolio">
+                                Portfolio
                             </NavDropdown.Item>
                             <NavDropdown.Divider/>
                             <NavDropdown.Item href="/">
-                                Çıkış yap
+                                Log out
                             </NavDropdown.Item>
                         </NavDropdown>
                     </Nav>

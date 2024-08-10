@@ -8,7 +8,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from './pages/Login';
 import  React from 'react';
 import Home from "./pages/Home";
-import MyProfile from "./pages/MyProfile";
+import Portfolio from "./pages/Portfolio";
 import OperationHistory from "./pages/OperationHistory";
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
                     <Route index element={<Login/>} />
 
                     <Route exact path="/home" element={<Home />} />
-                    <Route exact path="/profile" element={<MyProfile />} />
+                    <Route exact path="/portfolio" element={<Portfolio />} />
                     <Route exact path="/operation-history" element={<OperationHistory />} />
                 </Routes>
             </Router>

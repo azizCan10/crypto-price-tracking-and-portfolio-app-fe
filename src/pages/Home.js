@@ -96,7 +96,7 @@ export default function Home() {
                         <thead>
                         <tr>
                             <th scope="col">Tracking</th>
-                            <th scope="col">Price</th>
+                            <th scope="col"></th>
                         </tr>
                         </thead>
                         <tbody>
