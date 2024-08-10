@@ -55,3 +55,8 @@
     color: #ffffff;
 }
 
+.grid-table {
+    padding: 10px;
+    box-shadow: 0 5px 8px rgba(0.1, 0.1, 0.1, 0.1);
+    overflow: hidden;
+}

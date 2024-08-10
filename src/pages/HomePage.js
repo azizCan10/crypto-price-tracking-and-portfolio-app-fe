@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { TOKEN } from "../config";
 import TradingViewWidget from "../widget/TradingViewWidget";
-import CustomNavbar from "../layout/CustomNavbar";
+import HomePageNavbar from "../layout/HomePageNavbar";
 
 export default function HomePage() {
     const [me, setMe] = useState(null);
@@ -85,7 +85,7 @@ export default function HomePage() {
 
     return (
         <>
-            <CustomNavbar />
+            <HomePageNavbar />
             <div className="d-flex" style={{ height: 'calc(100vh - 56px)' }}>
                 <div style={{ width: '80%' }}>
                     <TradingViewWidget symbol={selectedSymbol} />
