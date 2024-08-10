@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { TOKEN } from "../config";
 import TradingViewWidget from "../widget/TradingViewWidget";
-import HomePageNavbar from "../layout/HomePageNavbar";
+import HomeNavbar from "../layout/HomeNavbar";
 
-export default function HomePage() {
+export default function Home() {
     const [me, setMe] = useState(null);
     const [selectedSymbol, setSelectedSymbol] = useState('BINANCE:BTCUSDT');
     const [prices, setPrices] = useState({});
@@ -85,7 +85,7 @@ export default function HomePage() {
 
     return (
         <>
-            <HomePageNavbar />
+            <HomeNavbar />
             <div className="d-flex" style={{ height: 'calc(100vh - 56px)' }}>
                 <div style={{ width: '80%' }}>
                     <TradingViewWidget symbol={selectedSymbol} />

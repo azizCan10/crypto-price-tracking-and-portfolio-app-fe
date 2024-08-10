@@ -7,7 +7,7 @@ import axios from "axios";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from './pages/Login';
 import  React from 'react';
-import HomePage from "./pages/HomePage";
+import Home from "./pages/Home";
 import MyProfile from "./pages/MyProfile";
 import OperationHistory from "./pages/OperationHistory";
 
@@ -20,7 +20,7 @@ function App() {
                 <Routes>
                     <Route index element={<Login/>} />
 
-                    <Route exact path="/home" element={<HomePage />} />
+                    <Route exact path="/home" element={<Home />} />
                     <Route exact path="/profile" element={<MyProfile />} />
                     <Route exact path="/operation-history" element={<OperationHistory />} />
                 </Routes>

@@ -5,7 +5,7 @@ import Nav from 'react-bootstrap/Nav';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import {Navbar} from "react-bootstrap";
 
-export default function HomePageNavbar() {
+export default function HomeNavbar() {
     return (
         <Navbar collapseOnSelect expand="lg" className="custom-navbar">
             <Container>
