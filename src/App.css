@@ -1,0 +1,57 @@
+.App {
+    background-color: #181c26;
+}
+
+.custom-table {
+    width: 100%;
+    background-color: #181c26;
+    color: #ffffff;
+    border-collapse: collapse;
+    cursor: pointer;
+}
+
+.custom-table th, .custom-table td {
+    padding: 15px;
+    border-bottom: 1px solid #333;
+}
+
+.custom-table tr {
+    line-height: 20px;
+}
+
+.custom-table tr:last-child td {
+    border-bottom: none;
+}
+
+.custom-table tbody tr:hover {
+    background-color: #222630;
+}
+
+.custom-navbar {
+    background-color: #181c26 !important;
+}
+
+.custom-navbar .nav-link {
+    color: #ffffff !important;
+}
+
+.custom-navbar .nav-link:hover,
+.custom-navbar .nav-link:focus {
+    color: #ffffff !important;
+}
+
+.custom-navbar .dropdown-menu {
+    background-color: #181c26;
+    color: #ffffff;
+}
+
+.custom-navbar .dropdown-item {
+    color: #ffffff;
+}
+
+.custom-navbar .dropdown-item:hover,
+.custom-navbar .dropdown-item:focus {
+    background-color: #222630;
+    color: #ffffff;
+}
+
