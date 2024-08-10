@@ -4,34 +4,35 @@ import { Link } from 'react-router-dom';
 import 'react-toastify/dist/ReactToastify.css';
 import axios from "axios";
 
-export default function Login() {
+export default function Register() {
 
+    const [name, setName] = useState("")
+    const [surname, setSurname] = useState("")
     const [username, setUsername] = useState("")
+    const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
 
-    const login = async (e) => {
+    const register = async (e) => {
         e.preventDefault();
 
         const requestBody = {
+            name: name,
+            surname: surname,
             username: username,
+            email: email,
             password: password,
         };
 
         try {
-            const response = await axios.post(`/auth/generate-token`, requestBody, {
+            await axios.post(`/auth`, requestBody, {
                 headers: {
                     'Content-Type': 'application/json',
                 },
             });
 
-            localStorage.setItem('token', response.data)
-            window.location.href = '/home';
+            window.location.href = '/login';
         } catch (error) {
-            if (error.response.status === 404) {
-                alert("There is no such user!");
-            } else {
-                alert("Username or password is wrong!!");
-            }
+            alert("An error occurred while registering!")
         }
     };
 
@@ -41,12 +42,39 @@ export default function Login() {
                 <h3 className="text-center mb-4">Log in</h3>
                 <form>
                     <div className="mb-3">
+                        <label htmlFor="name" className="form-label">Name</label>
+                        <input
+                            type="text"
+                            className="form-control"
+                            name="name"
+                            onChange={(e) => setName(e.target.value)}
+                        />
+                    </div>
+                    <div className="mb-3">
+                        <label htmlFor="surname" className="form-label">Surname</label>
+                        <input
+                            type="text"
+                            className="form-control"
+                            name="surname"
+                            onChange={(e) => setSurname(e.target.value)}
+                        />
+                    </div>
+                    <div className="mb-3">
                         <label htmlFor="userName" className="form-label">Username</label>
                         <input
                             type="text"
                             className="form-control"
                             name="userName"
                             onChange={(e) => setUsername(e.target.value)}
+                        />
+                    </div>
+                    <div className="mb-3">
+                        <label htmlFor="email" className="form-label">E-Mail</label>
+                        <input
+                            type="text"
+                            className="form-control"
+                            name="email"
+                            onChange={(e) => setEmail(e.target.value)}
                         />
                     </div>
                     <div className="mb-3">
@@ -59,12 +87,7 @@ export default function Login() {
                         />
                     </div>
                     <div className="d-grid">
-                        <Link className="btn" onClick={login} style={{backgroundColor: '#181c26', color: '#ffffff'}}>Log
-                            in</Link>
-                    </div>
-                    <div className="text-center mt-3">
-                        <span>Not registered yet? </span>
-                        <Link to="/register" style={{color: '#181c26', textDecoration: 'underline'}}>Sign up now</Link>
+                        <Link className="btn" onClick={register} style={{backgroundColor: '#181c26', color: '#ffffff'}}>Register</Link>
                     </div>
                 </form>
             </div>

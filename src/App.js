@@ -10,6 +10,7 @@ import  React from 'react';
 import Home from "./pages/Home";
 import Portfolio from "./pages/Portfolio";
 import OperationHistory from "./pages/OperationHistory";
+import Register from "./pages/Register";
 
 function App() {
     axios.defaults.baseURL = 'http://localhost:8080/api';
@@ -23,6 +24,7 @@ function App() {
                     <Route exact path="/home" element={<Home />} />
                     <Route exact path="/portfolio" element={<Portfolio />} />
                     <Route exact path="/operation-history" element={<OperationHistory />} />
+                    <Route exact path="/register" element={<Register />} />
                 </Routes>
             </Router>
         </div>
