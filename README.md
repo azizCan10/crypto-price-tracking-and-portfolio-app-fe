@@ -1,70 +1,84 @@
-# Getting Started with Create React App
+# Crypto Price Tracking and Portfolio App Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Project Overview
 
-## Available Scripts
+In this project, users can:
 
-In the project directory, you can run:
+- Register on the system (users will receive a welcome email upon registration).
+- Add any cryptocurrency to their watchlist.
+- Analyse any cryptocurrency on Trading Chart Widget.
+- See the real time price of the cryptocurrencies they track.
+- Create a portfolio by entering their trading transactions for cryptocurrencies.
+- View their trading history.
 
-### `npm start`
+## Role Management
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Admin**
+- **User**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Admin Features:
+- View all users.
+- Update user roles.
+- Delete all users.
+- Delete specific users.
+- and all user features.
 
-### `npm test`
+### User Features:
+- Add any cryptocurrency to their watchlist (must be listed on Binance exchange).
+- Create a portfolio by adding cryptocurrencies they trade.
+- View their trading history.
+- Update their own information.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Features
 
-### `npm run build`
+* Register
+* Login
+* Admin Operations
+* TradingView widget
+* Real time price tracking
+* Make a portfolio
+* See your operation history
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Technologies
+* React
+* Bootstrap
+* TradingView Trading Chart Widget - [link](https://www.tradingview.com/widget/advanced-chart/)
+* Binance Websocket Market Streams - [link](https://developers.binance.com/docs/derivatives/usds-margined-futures/websocket-market-streams/Connect)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Getting Started
+To get started with this project, you will need to have the following installed on your local machine:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* Node.js
 
-### `npm run eject`
+To build and run the project, follow these steps:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+* Install the backend first: [Crypto Price Tracking and Portfolio API](https://github.com/azizCan10/crypto-price-tracking-and-portfolio-app)
+* Clone the repository: `https://github.com/azizCan10/crypto-price-tracking-and-portfolio-app-fe.git`
+* Navigate to the project directory
+* Install dependencies: `npm install`
+* Start the application: `npm start`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+-> The application will be available at http://localhost:3000
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Screenshots
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Login
+<img width="1692" alt="login" src="https://github.com/user-attachments/assets/8c2b247f-b253-40af-9260-c0bb8860f573">
 
-## Learn More
+### Register
+<img width="1696" alt="register" src="https://github.com/user-attachments/assets/8bfeed68-f48e-4d6a-9c4f-3492f2bd1a7a">
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Home Page - Tracking And Chart
+<img width="1694" alt="home" src="https://github.com/user-attachments/assets/c6f2e965-a51f-4a43-a328-8b512478a8b3">
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Portfolio
+<img width="1697" alt="portfolio" src="https://github.com/user-attachments/assets/cc7b48d5-df65-4c43-9d64-876b2788bbd6">
 
-### Code Splitting
+### Edit Portfolio
+<img width="1694" alt="edit operation" src="https://github.com/user-attachments/assets/63ead958-763e-43aa-ac16-00749f9cffc6">
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Operation History
+<img width="1698" alt="operation history" src="https://github.com/user-attachments/assets/34b3faa5-3946-4340-bf70-2bd7a377f220">
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Admin Page
+<img width="1697" alt="admin" src="https://github.com/user-attachments/assets/452ccfcd-ebea-4623-b098-fc5ed92784e7">
