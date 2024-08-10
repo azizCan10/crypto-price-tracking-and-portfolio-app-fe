@@ -18,6 +18,9 @@ export default function HomePageNavbar() {
                             <NavDropdown.Item href="/profile">
                                 Profilim
                             </NavDropdown.Item>
+                            <NavDropdown.Item href="/operation-history">
+                                İşlem geçmişi
+                            </NavDropdown.Item>
                             <NavDropdown.Divider/>
                             <NavDropdown.Item href="/">
                                 Çıkış yap
