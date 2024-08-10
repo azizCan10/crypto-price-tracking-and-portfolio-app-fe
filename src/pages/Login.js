@@ -38,7 +38,7 @@ export default function Login() {
 
     return (
         <div className="d-flex justify-content-center align-items-center vh-100">
-            <div className="card p-4" style={{ width: '350px', backgroundColor: "#f8f9fa" }}>
+            <div className="card p-4" style={{ width: '350px', backgroundColor: "#E0E0E0" }}>
                 <h3 className="text-center mb-4">Giriş Yap</h3>
                 <form>
                     <div className="mb-3">
@@ -60,7 +60,7 @@ export default function Login() {
                         />
                     </div>
                     <div className="d-grid">
-                        <Link className="btn btn-success mx-2" onClick={login}>Giriş Yap</Link>
+                        <Link className="btn" onClick={login} style={{ backgroundColor: '#181c26', color: '#ffffff' }}>Giriş Yap</Link>
                     </div>
                 </form>
             </div>
