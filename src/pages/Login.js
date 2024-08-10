@@ -18,13 +18,15 @@ export default function Login() {
         };
 
         try {
-            await axios.post(`/auth/generate-token`, requestBody, {
+            const response = await axios.post(`/auth/generate-token`, requestBody, {
                 headers: {
                     'Content-Type': 'application/json',
                 },
             });
 
             alert('Giriş başarılı');
+            localStorage.setItem('token', response.data)
+            window.location.href = '/home';
         } catch (error) {
             if (error.response.status === 404) {
                 alert("Böyle bir kullanıcı bulunmamaktadır!");
