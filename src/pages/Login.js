@@ -24,14 +24,13 @@ export default function Login() {
                 },
             });
 
-            alert('Giriş başarılı');
             localStorage.setItem('token', response.data)
             window.location.href = '/home';
         } catch (error) {
             if (error.response.status === 404) {
-                alert("Böyle bir kullanıcı bulunmamaktadır!");
+                alert("There is no such user!");
             } else {
-                alert("Kullanıcı adı ya da şifre hatalı!");
+                alert("Username or password is wrong!!");
             }
         }
     };
@@ -39,10 +38,10 @@ export default function Login() {
     return (
         <div className="d-flex justify-content-center align-items-center vh-100">
             <div className="card p-4" style={{ width: '350px', backgroundColor: "#E0E0E0" }}>
-                <h3 className="text-center mb-4">Giriş Yap</h3>
+                <h3 className="text-center mb-4">Log in</h3>
                 <form>
                     <div className="mb-3">
-                        <label htmlFor="userName" className="form-label">Kullanıcı Adı</label>
+                        <label htmlFor="userName" className="form-label">Username</label>
                         <input
                             type="text"
                             className="form-control"
@@ -51,7 +50,7 @@ export default function Login() {
                         />
                     </div>
                     <div className="mb-3">
-                        <label htmlFor="password" className="form-label">Şifre</label>
+                        <label htmlFor="password" className="form-label">Password</label>
                         <input
                             type="password"
                             className="form-control"
@@ -60,7 +59,7 @@ export default function Login() {
                         />
                     </div>
                     <div className="d-grid">
-                        <Link className="btn" onClick={login} style={{ backgroundColor: '#181c26', color: '#ffffff' }}>Giriş Yap</Link>
+                        <Link className="btn" onClick={login} style={{ backgroundColor: '#181c26', color: '#ffffff' }}>Log in</Link>
                     </div>
                 </form>
             </div>

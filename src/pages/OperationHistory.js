@@ -16,7 +16,7 @@ export default function OperationHistory() {
             });
             setOperationHistory(response.data);
         } catch (error) {
-            console.error('API çağrısı hatası:', error);
+            console.error('API call error:', error);
         }
     };
 

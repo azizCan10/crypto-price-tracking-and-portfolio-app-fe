@@ -20,7 +20,7 @@ export default function Home() {
             });
             setMe(response.data);
         } catch (error) {
-            console.error('API çağrısı hatası:', error);
+            console.error('API call error:', error);
         }
     };
 
