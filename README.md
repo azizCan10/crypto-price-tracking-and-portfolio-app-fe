@@ -68,8 +68,8 @@ To build and run the project, follow these steps:
 ### Register
 <img width="1696" alt="register" src="https://github.com/user-attachments/assets/8bfeed68-f48e-4d6a-9c4f-3492f2bd1a7a">
 
-### Home Page - Tracking And Chart
-<img width="1694" alt="home" src="https://github.com/user-attachments/assets/c6f2e965-a51f-4a43-a328-8b512478a8b3">
+### Home Page - Tracking and Chart
+<img width="1694" alt="home" src="https://github.com/user-attachments/assets/ebbcbb94-4f3b-4ecc-9ab4-0766f48b5c89">
 
 ### Portfolio
 <img width="1697" alt="portfolio" src="https://github.com/user-attachments/assets/cc7b48d5-df65-4c43-9d64-876b2788bbd6">
@@ -80,5 +80,17 @@ To build and run the project, follow these steps:
 ### Operation History
 <img width="1698" alt="operation history" src="https://github.com/user-attachments/assets/34b3faa5-3946-4340-bf70-2bd7a377f220">
 
+### Update Profile
+<img width="1697" alt="update" src="https://github.com/user-attachments/assets/bfb833e6-3055-453b-a926-fe013163d149">
+
 ### Admin Page
 <img width="1697" alt="admin" src="https://github.com/user-attachments/assets/452ccfcd-ebea-4623-b098-fc5ed92784e7">
+
+### Admin Page - Update User Roles
+<img width="1694" alt="role update" src="https://github.com/user-attachments/assets/28ec53eb-af76-4868-938c-ba87c773c66d">
+
+### Successful Alert
+<img width="1697" alt="success alert" src="https://github.com/user-attachments/assets/14c9c095-91b3-4094-9c64-f2f153ae8302">
+
+### Fail Alert
+<img width="1690" alt="fail alert" src="https://github.com/user-attachments/assets/90fe7428-6bca-40f5-adca-3bef158b14f6">
