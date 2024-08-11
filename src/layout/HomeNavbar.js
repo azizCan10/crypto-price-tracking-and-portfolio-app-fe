@@ -20,6 +20,9 @@ export default function HomeNavbar({isAdmin}) {
                                     Admin
                                 </NavDropdown.Item>
                             )}
+                            <NavDropdown.Item href="/update">
+                                Update Profile
+                            </NavDropdown.Item>
                             <NavDropdown.Item href="/portfolio">
                                 Portfolio
                             </NavDropdown.Item>

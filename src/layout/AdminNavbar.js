@@ -18,6 +18,9 @@ export default function AdminNavbar() {
                             <NavDropdown.Item href="/home">
                                 Home
                             </NavDropdown.Item>
+                            <NavDropdown.Item href="/update">
+                                Update Profile
+                            </NavDropdown.Item>
                             <NavDropdown.Item href="/portfolio">
                                 Portfolio
                             </NavDropdown.Item>

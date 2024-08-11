@@ -12,6 +12,7 @@ import Portfolio from "./pages/Portfolio";
 import OperationHistory from "./pages/OperationHistory";
 import Register from "./pages/Register";
 import Admin from "./pages/Admin";
+import Update from "./pages/Update";
 
 function App() {
     axios.defaults.baseURL = 'http://localhost:8080/api';
@@ -27,6 +28,7 @@ function App() {
                     <Route exact path="/operation-history" element={<OperationHistory />} />
                     <Route exact path="/register" element={<Register />} />
                     <Route exact path="/admin" element={<Admin />} />
+                    <Route exact path="/update" element={<Update />} />
                 </Routes>
             </Router>
         </div>

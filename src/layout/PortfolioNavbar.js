@@ -18,6 +18,9 @@ export default function PortfolioNavbar() {
                             <NavDropdown.Item href="/home">
                                 Home
                             </NavDropdown.Item>
+                            <NavDropdown.Item href="/update">
+                                Update Profile
+                            </NavDropdown.Item>
                             <NavDropdown.Item href="/operation-history">
                                 Operation history
                             </NavDropdown.Item>
