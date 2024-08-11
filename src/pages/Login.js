@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import 'react-toastify/dist/ReactToastify.css';
 import axios from "axios";
+import { alertDanger } from '../utils/Alert';
 
 export default function Login() {
 
@@ -28,9 +29,9 @@ export default function Login() {
             window.location.href = '/home';
         } catch (error) {
             if (error.response.status === 404) {
-                alert("There is no such user!");
+                alertDanger("There is no such user!");
             } else {
-                alert("Username or password is wrong!!");
+                alertDanger("Username or password is wrong!!");
             }
         }
     };

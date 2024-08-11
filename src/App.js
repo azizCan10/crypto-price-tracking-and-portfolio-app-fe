@@ -13,6 +13,7 @@ import OperationHistory from "./pages/OperationHistory";
 import Register from "./pages/Register";
 import Admin from "./pages/Admin";
 import Update from "./pages/Update";
+import {ToastContainer} from "react-toastify";
 
 function App() {
     axios.defaults.baseURL = 'http://localhost:8080/api';
@@ -31,6 +32,7 @@ function App() {
                     <Route exact path="/update" element={<Update />} />
                 </Routes>
             </Router>
+            <ToastContainer/>
         </div>
     );
 }

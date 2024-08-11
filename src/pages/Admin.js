@@ -5,6 +5,7 @@ import Button from 'react-bootstrap/Button';
 import AdminNavbar from "../layout/AdminNavbar";
 import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
+import {alertDanger, alertSuccess} from "../utils/Alert";
 
 export default function Admin() {
     const [allUsers, setAllUsers] = useState(null);
@@ -50,8 +51,10 @@ export default function Admin() {
                 },
             });
             getAllUsers();
+            alertSuccess("User deleted.")
         } catch (error) {
             console.error('API call error:', error);
+            alertDanger("An error occurred while deleting the user")
         }
     };
 
@@ -64,8 +67,10 @@ export default function Admin() {
                 },
             });
             getAllUsers();
+            alertSuccess("All users deleted.")
         } catch (error) {
             console.error('API call error:', error);
+            alertDanger("An error occurred while deleting the users")
         }
     };
 
@@ -95,8 +100,10 @@ export default function Admin() {
                 },
             });
             setShowModal(false);
+            alertSuccess("User roles updated!")
         } catch (error) {
             console.error('API call error:', error);
+            alertDanger("An error occurred while updating the user")
         }
     };
 

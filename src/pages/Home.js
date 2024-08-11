@@ -4,6 +4,7 @@ import { TOKEN } from "../config";
 import TradingViewWidget from "../widget/TradingViewWidget";
 import HomeNavbar from "../layout/HomeNavbar";
 import { Modal, Button } from 'react-bootstrap';
+import {alertDanger, alertSuccess} from "../utils/Alert";
 
 export default function Home() {
     const [me, setMe] = useState(null);
@@ -109,8 +110,10 @@ export default function Home() {
             });
             setShowModal(false);
             getMe();
+            alertSuccess(`${modalSymbol} added.`)
         } catch (error) {
             console.error('API call error:', error);
+            alertDanger("An error occurred while adding the symbol ${modalSymbol}")
         }
     };
 
@@ -123,8 +126,10 @@ export default function Home() {
                 },
             });
             getMe();
+            alertSuccess(`${modalSymbol} deleted.`)
         } catch (error) {
             console.error('API call error:', error);
+            alertDanger("An error occurred while deleting the symbol ${modalSymbol}")
         }
     };
 
