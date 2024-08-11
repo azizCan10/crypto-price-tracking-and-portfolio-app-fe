@@ -21,6 +21,20 @@ export default function Admin() {
         }
     };
 
+    const deleteUser = async (userId) => {
+        try {
+            await axios.delete(`/admin/user/${userId}`, {
+                headers: {
+                    'Authorization': `Bearer ${TOKEN}`,
+                    'Content-Type': 'application/json'
+                },
+            });
+            getAllUsers();
+        } catch (error) {
+            console.error('API call error:', error);
+        }
+    };
+
     const deleteAllUsers = async () => {
         try {
             await axios.delete('/admin/users', {
@@ -45,7 +59,6 @@ export default function Admin() {
             <div className="d-flex flex-column align-items-center" style={{ height: 'calc(100vh - 56px)' }}>
                 <div className="mb-3">
                     <Button variant="danger" onClick={deleteAllUsers}>DELETE ALL</Button>
-
                 </div>
                 <div style={{ width: '80%' }}>
                     {allUsers && (
@@ -57,6 +70,8 @@ export default function Admin() {
                                     <th scope="col">Name</th>
                                     <th scope="col">Username</th>
                                     <th scope="col">E-Mail</th>
+                                    <th scope="col"></th>
+                                    <th scope="col"></th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -66,6 +81,12 @@ export default function Admin() {
                                         <td>{user.name} {user.surname}</td>
                                         <td>{user.username}</td>
                                         <td>{user.email}</td>
+                                        <td>
+                                            <Button variant="success">Update</Button>
+                                        </td>
+                                        <td>
+                                            <Button variant="danger" onClick={() => deleteUser(user.id)}>DELETE</Button>
+                                        </td>
                                     </tr>
                                 ))}
                                 </tbody>
