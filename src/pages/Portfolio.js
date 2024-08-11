@@ -149,7 +149,7 @@ export default function Portfolio() {
                 </div>
             </div>
 
-            <Modal show={showModal} onHide={handleCloseModal}>
+            <Modal show={showModal} onHide={handleCloseModal} className="custom-modal">
                 <Modal.Header closeButton>
                     <Modal.Title>{modalData ? 'Edit Operation' : 'Add Operation'}</Modal.Title>
                 </Modal.Header>

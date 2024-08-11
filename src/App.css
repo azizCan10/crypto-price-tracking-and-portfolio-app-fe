@@ -60,3 +60,23 @@
     box-shadow: 0 5px 8px rgba(0.1, 0.1, 0.1, 0.1);
     overflow: hidden;
 }
+
+.custom-modal .modal-content {
+    background-color: #181c26;
+}
+
+.custom-modal .modal-header,
+.custom-modal .modal-body,
+.custom-modal .modal-footer {
+    color: white;
+}
+
+.custom-modal .form-control {
+    background-color: #181c26;
+    border-color: #222630;
+    color: white;
+}
+
+.custom-modal .btn-close {
+    filter: invert(1);
+}
