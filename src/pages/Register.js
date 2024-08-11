@@ -39,7 +39,7 @@ export default function Register() {
     return (
         <div className="d-flex justify-content-center align-items-center vh-100">
             <div className="card p-4" style={{ width: '350px', backgroundColor: "#E0E0E0" }}>
-                <h3 className="text-center mb-4">Log in</h3>
+                <h3 className="text-center mb-4">Register</h3>
                 <form>
                     <div className="mb-3">
                         <label htmlFor="name" className="form-label">Name</label>
