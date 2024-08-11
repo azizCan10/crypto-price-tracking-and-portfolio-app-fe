@@ -3,9 +3,15 @@ import axios from 'axios';
 import { TOKEN } from "../config";
 import Button from 'react-bootstrap/Button';
 import AdminNavbar from "../layout/AdminNavbar";
+import Modal from 'react-bootstrap/Modal';
+import Form from 'react-bootstrap/Form';
 
 export default function Admin() {
     const [allUsers, setAllUsers] = useState(null);
+    const [roles, setRoles] = useState([]);
+    const [selectedUserId, setSelectedUserId] = useState(null);
+    const [selectedRoles, setSelectedRoles] = useState([]);
+    const [showModal, setShowModal] = useState(false);
 
     const getAllUsers = async () => {
         try {
@@ -16,6 +22,20 @@ export default function Admin() {
                 },
             });
             setAllUsers(response.data);
+        } catch (error) {
+            console.error('API call error:', error);
+        }
+    };
+
+    const getRoles = async () => {
+        try {
+            const response = await axios.get('/role', {
+                headers: {
+                    'Authorization': `Bearer ${TOKEN}`,
+                    'Content-Type': 'application/json'
+                },
+            });
+            setRoles(response.data);
         } catch (error) {
             console.error('API call error:', error);
         }
@@ -44,6 +64,37 @@ export default function Admin() {
                 },
             });
             getAllUsers();
+        } catch (error) {
+            console.error('API call error:', error);
+        }
+    };
+
+    const handleUpdateClick = async (userId) => {
+        setSelectedUserId(userId);
+        await getRoles();
+        setShowModal(true);
+    };
+
+    const handleCheckboxChange = (role) => {
+        setSelectedRoles(prevSelectedRoles =>
+            prevSelectedRoles.includes(role)
+                ? prevSelectedRoles.filter(r => r !== role)
+                : [...prevSelectedRoles, role]
+        );
+    };
+
+    const handleUpdate = async () => {
+        try {
+            await axios.put('/admin/user', {
+                id: selectedUserId,
+                authorities: selectedRoles
+            }, {
+                headers: {
+                    'Authorization': `Bearer ${TOKEN}`,
+                    'Content-Type': 'application/json'
+                },
+            });
+            setShowModal(false);
         } catch (error) {
             console.error('API call error:', error);
         }
@@ -82,7 +133,7 @@ export default function Admin() {
                                         <td>{user.username}</td>
                                         <td>{user.email}</td>
                                         <td>
-                                            <Button variant="success">Update</Button>
+                                            <Button variant="success" onClick={() => handleUpdateClick(user.id)}>Update</Button>
                                         </td>
                                         <td>
                                             <Button variant="danger" onClick={() => deleteUser(user.id)}>DELETE</Button>
@@ -95,6 +146,29 @@ export default function Admin() {
                     )}
                 </div>
             </div>
+
+            <Modal show={showModal} onHide={() => setShowModal(false)} className="custom-modal">
+                <Modal.Header closeButton>
+                    <Modal.Title>Update User Roles</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <Form>
+                        {roles.map((role, index) => (
+                            <Form.Check
+                                key={index}
+                                type="checkbox"
+                                label={role}
+                                onChange={() => handleCheckboxChange(role)}
+                                checked={selectedRoles.includes(role)}
+                            />
+                        ))}
+                    </Form>
+                </Modal.Body>
+                <Modal.Footer>
+                    <Button variant="secondary" onClick={() => setShowModal(false)}>Cancel</Button>
+                    <Button variant="primary" onClick={handleUpdate}>Update</Button>
+                </Modal.Footer>
+            </Modal>
         </>
     );
 }

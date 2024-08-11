@@ -21,7 +21,7 @@ export default function Home() {
             });
             setMe(response.data);
 
-            if (response.data.authorities.includes("ROLE_ADMIN")) {
+            if (response.data.authorities.includes("ADMIN")) {
                 setAdmin(true);
             }
         } catch (error) {
