@@ -18,7 +18,7 @@ export default function Login() {
         };
 
         try {
-            const response = await axios.post(`/auth/generate-token`, requestBody, {
+            const response = await axios.post(`/auth/login`, requestBody, {
                 headers: {
                     'Content-Type': 'application/json',
                 },

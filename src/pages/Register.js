@@ -24,13 +24,13 @@ export default function Register() {
         };
 
         try {
-            await axios.post(`/auth`, requestBody, {
+            await axios.post(`/auth/register`, requestBody, {
                 headers: {
                     'Content-Type': 'application/json',
                 },
             });
 
-            window.location.href = '/login';
+            window.location.href = '/';
         } catch (error) {
             alert("An error occurred while registering!")
         }
